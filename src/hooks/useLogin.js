@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
+import { URL } from '../App';
 import {AuthHook } from './authHooks'
 
 
@@ -13,7 +14,7 @@ export const useLogin = () => {
         setIsLoading(true);
         setErrors(null)
 
-        const response =  await fetch('/api/userRoutes/login',{
+        const response =  await fetch(`${URL}/api/userRoutes/login`,{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body:  JSON.stringify({email, password}),

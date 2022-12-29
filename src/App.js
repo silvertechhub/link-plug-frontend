@@ -13,6 +13,8 @@ import { AuthHook } from './hooks/authHooks'
 import ForgotPassword from './components/ForgotPassword';
 import ResetPassword from './components/ResetPassword';
 
+export const URL = process.env.REACT_APP_SERVER
+
 function App() {
   const { user } = AuthHook()
   return (

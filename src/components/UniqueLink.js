@@ -5,6 +5,7 @@ import { AuthHook } from '../hooks/authHooks'
 
 import axios from 'axios';
 import Links from './Links';
+import { URL } from '../App';
 
 export default function UniqueLink() {
 
@@ -20,7 +21,7 @@ export default function UniqueLink() {
     useEffect(() => { 
     
      const getUserLinks = async () =>{
-      axios.get('/api/routes/links', {headers: 
+      axios.get(`${URL}/api/routes/links`, {headers: 
         { 'Authorization': `Bearer ${user.token}`} 
         }).then(res => {
         

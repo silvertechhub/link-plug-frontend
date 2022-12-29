@@ -5,6 +5,7 @@ import axios from 'axios'
 import {Link, useNavigate} from 'react-router-dom'
 import { useLogin } from '../hooks/useLogin'
 import {AuthHook } from '../hooks/authHooks'
+import { URL } from '../App'
 
 export default function Login() {
     const { login,  errors, isLoading } = useLogin()
@@ -32,7 +33,7 @@ export default function Login() {
     
 
     const handleGoogleLogin = async (response) => {
-        await axios.post('/api/userRoutes/googleLogin',
+        await axios.post(`${URL}/api/userRoutes/googleLogin`,
         {token: response.tokenId}).then((res) => {
           console.log(res.data)
           localStorage.setItem('user', JSON.stringify(res.data))
