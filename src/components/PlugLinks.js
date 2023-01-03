@@ -3,6 +3,7 @@ import { AuthHook } from '../hooks/authHooks'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid'
+import { URL } from '../App'
 
 export default function PlugLinks() {
   const {displayNames} = useParams()
@@ -13,7 +14,7 @@ export default function PlugLinks() {
   useEffect(() => {
     const getlinks = async () => {
       
-        axios.get(`/api/routes/${displayNames}`).then((res) => {
+        axios.get(`${URL}/api/routes/${displayNames}`).then((res) => {
           setpluglink(res.data)
         }).catch((err) => {
           console.log(err) 
