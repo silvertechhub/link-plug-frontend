@@ -73,10 +73,10 @@ export default function Links({ handleButton}) {
                  <h5 className='text-center'>Share you Link below</h5>
                 
                  <CopyToClipboard
-                  text={`https://link-plug.herokuapp.com/${details.displayName}`}
+                  text={`https://linkplug.onrender.com/${details.displayName}`}
                   onCopy={() => alert("Copied")}>
                     <p className='text-lg text-center'>
-                      https://link-plug.herokuapp.com/{details.displayName}
+                      https://linkplug.onrender.com/{details.displayName}
                     </p>
                  </CopyToClipboard>
                 <div className='flex justify-center pt-3'> <p className='text-sm text-gray-400'>Click on the link to copy </p> <ClipboardCopyIcon className='w-5'/></div>
