@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { URL } from '../App'
 import {AuthHook } from './authHooks'
 // import axios from 'axios'
 
@@ -11,7 +12,7 @@ export const useSignup = () => {
         setIsLoading(true);
         setErrors(null)
 
-        const response =  await fetch('/api/userRoutes/signup',{
+        const response =  await fetch(`${URL}/api/userRoutes/signup`,{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body:  JSON.stringify({email, password, username, phoneNumber}),

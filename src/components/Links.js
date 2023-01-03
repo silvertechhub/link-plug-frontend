@@ -7,6 +7,7 @@ import animation from '../loader.json'
 import { v4 as uuidv4 } from 'uuid'
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import {ClipboardCopyIcon } from '@heroicons/react/solid'
+import { URL } from '../App';
 
 export default function Links({ handleButton}) {
 
@@ -14,7 +15,7 @@ export default function Links({ handleButton}) {
   const { userPlug, dispatch } = useLinkcontextHook();
   const handleDelete = async () => {
     if(window.confirm(`Are you sure you wanna delete this?`)){
-      await axios.delete(`/api/routes/${userPlug[0]._id}`, {headers: 
+      await axios.delete(`${URL}/api/routes/${userPlug[0]._id}`, {headers: 
         { 'Authorization': `Bearer ${user.token}`} 
         }).then((res) => {
           dispatch({type: 'DELETE_LINKS', payload:res.data})

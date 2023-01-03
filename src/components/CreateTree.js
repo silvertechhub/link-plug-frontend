@@ -6,6 +6,7 @@ import axios from 'axios';
 import { Input } from "@material-tailwind/react";
 import {PlusIcon} from '@heroicons/react/solid'
 import {XCircleIcon} from '@heroicons/react/solid'
+import { URL } from '../App';
 
 
 export default function CreateTree() {
@@ -38,7 +39,7 @@ export default function CreateTree() {
             return
         }
         
-         axios.post('/api/routes/links', 
+         axios.post(`${URL}/api/routes/links`, 
             {displayName, userLinks},
             {headers: 
                 { 'Authorization': `Bearer ${user.token}`} 

@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import {toast, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import { URL } from '../App';
 
 export default function ResetPassword() {
     const [validUrl, setValidUrl] = useState(true)
@@ -35,7 +36,7 @@ export default function ResetPassword() {
         //    }else{
         //         setError("Make sure that your put in the correct password in both input fields")
         // }
-        await axios.post('/api/userRoutes/resetpassword', {
+        await axios.post(`${URL}/api/userRoutes/resetpassword`, {
             newPass:password, resetPassToken:token, userId:id}).then((res) => {
                 console.log(res)
                 toast.success(res.data)

@@ -45,7 +45,7 @@ export default function Signup() {
         </div><br/>
         <span>Already have an account? <Link to='/login' className='text-pry'>Login</Link></span>
         
-            <div>
+            <div >
             <h2 className='text-2xl font-semibold text-sec text-center py-4'>Or</h2>
             <GoogleLogin 
               clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}

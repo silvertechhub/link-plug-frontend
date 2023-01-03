@@ -3,6 +3,7 @@ import { AuthHook } from '../hooks/authHooks'
 import Links from './Links';
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react';
+import { URL } from '../App';
 
 export default function ProfilePage() {
     const [editUsername, setEditUsername] = useState('')
@@ -16,7 +17,7 @@ export default function ProfilePage() {
         const id = user.id
         if(window.confirm(`Are you sure you want to delete your account with us? 
         You won't be able to undo this action`)){
-            axios.delete(`/api/userRoutes/${id}`, {headers: 
+            axios.delete(`${URL}/api/userRoutes/${id}`, {headers: 
                 { 'Authorization': `Bearer ${user.token}`} 
                 }).then((res) => {
                 console.log(res)
@@ -33,7 +34,7 @@ export default function ProfilePage() {
 
     const editProfile = async () => {
         const id = user.id
-        axios.patch(`api/userRoutes/${id}`, {username: editUsername, email: editEmail, phoneNumber: editPhoneNumber}, {headers: 
+        axios.patch(`${URL}api/userRoutes/${id}`, {username: editUsername, email: editEmail, phoneNumber: editPhoneNumber}, {headers: 
             { 'Authorization': `Bearer ${user.token}`} 
             }).then((res) => {
                 dispatch({type: 'EDIT', payload: res.data})
