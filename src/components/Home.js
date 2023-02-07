@@ -67,7 +67,7 @@ export default function Home() {
             </div>
           </div>
           <div className=''>
-          <Lottie options={globe} height={400} width={400} />
+          <Lottie options={globe} height={300} width={300} />
           </div>
         </div> 
         <div className='my-5 lg:grid grid-cols-2 gap-2'>
