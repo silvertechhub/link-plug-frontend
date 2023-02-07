@@ -9,6 +9,7 @@ module.exports = withMT({
         "pry" :"#369EA5",
         "sec" :"#0D4C92", 
         "cool":"#CFF5E7",
+        "rty":"#1cd45e",
         
       }
     },

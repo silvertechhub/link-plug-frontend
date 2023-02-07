@@ -48,7 +48,7 @@ export default function Links({ handleButton}) {
         <Lottie options={defaultOptions} height={300} width={300} />
           <p className='text-lg text-center px-4 py-5 text-sec'>
             Put all your profile (social media, music, blog-articles) togther and share with one single link
-            <br /><Link to='/create' className='text-pry text-lg'>Start Now>> </Link>
+            <br /><Link to='/create' className='text-pry text-lg'>Start Now </Link>
             </p>
             
         </div>
@@ -57,25 +57,26 @@ export default function Links({ handleButton}) {
             {userPlug && userPlug.map((details) => (
                 <div key={uuidv4()} className=' mx-6 py-3'>
                
-                <h1 className='text-center'>@{details.displayName}</h1>
+                <h1 className='text-center text-sec'>@{details.displayName}</h1>
                 {details && details.userLinks.map((pair) => (
-                  <div key={uuidv4()} className='grid place-items-center'>
-                    <div className='w-auto px-3 py-1 bg-gray-600 text-white rounded-tl-lg rounded-br-lg text-center my-5'>{pair.urls}</div>
-                    <div className='absolute left-1/2 -ml-0.5 w-px h-8 bg-black'></div>
-                    <div className='border rounded-tr-lg rounded-bl-lg bg-gray-500 bg-opacity-50 w-1/3 py-1 my-5 text-center'>{pair.label}</div>
-                   
+                  <div key={uuidv4()} className='flex justify-center'>
+                    <div className='border-2 my-6 grid justify-items-center w-fit px-9 shadow-lg rounded-tl-lg rounded-br-lg'>
+                      <div className='w-auto px-3 py-1 bg-pry text-white rounded-tl-lg rounded-br-lg text-center my-5'>{pair.urls}</div>
+                      <div className='border px-3 rounded-tr-lg rounded-bl-lg bg-cool text-black bg-opacity-50 w-fit py-1 my-5 text-center'>{pair.label}</div>
+                    </div>
+               
                   </div>
                 ))}
                 <div className='flex justify-center'>
-                  <button className='bg-black bg-opacity-75 w-36 h-10 text-white rounded-2xl' onClick={handleDelete}>delete</button>
+                  <button className='bg-white border-2 border-pry bg-opacity-75 w-36 h-10 text-sec rounded-2xl' onClick={handleDelete}>delete</button>
                 </div>
                  <div className='mt-6'>
                  <h5 className='text-center'>Share you Link below</h5>
                 
                  <CopyToClipboard
                   text={`https://linkplug.onrender.com/${details.displayName}`}
-                  onCopy={() => alert("Copied")}>
-                    <p className='text-lg text-center'>
+                  onCopy={() => alert("Copied")} className='text-pry text-center hover:text-sec'>
+                    <p className='text-lg'>
                       https://linkplug.onrender.com/{details.displayName}
                     </p>
                  </CopyToClipboard>

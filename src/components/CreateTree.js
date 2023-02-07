@@ -69,7 +69,7 @@ export default function CreateTree() {
     }
 
   return (
-    <div className='p-6'>
+    <div className='p-6 grid justify-items-center'>
         <div className='mx-10'> 
         <Input type="text" className='w-68' value={displayName} placeholder="enter your username" onChange={e => setDisplayName(e.target.value)}/>
         <p className='text-sm text-center text-gray-400'>This name is what forms your unique link </p>
@@ -92,7 +92,7 @@ export default function CreateTree() {
         ) }
        
        
-        <div className='flex text-sm text-green-500'>
+        <div className='flex mb-16 text-sm text-green-500'>
         <PlusIcon className='w-5' />
         <button className='my-2 ' onClick={handleAddInput}>
             Add input field

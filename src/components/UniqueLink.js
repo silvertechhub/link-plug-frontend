@@ -41,7 +41,7 @@ export default function UniqueLink() {
   
   return (
     <div className='py-4 '>
-      {user &&  <div className='text-center text-2xl'> Hi there, <span>{user.username}!</span></div>}
+      {user &&  <div className='text-center mt-5 mb-2 text-2xl'> Hi there, <span>{user.username}!</span></div>}
       
        <Links handleButton={handleButton} userPlug={userPlug} />      
         
