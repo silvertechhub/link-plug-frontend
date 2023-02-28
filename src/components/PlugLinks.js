@@ -20,7 +20,7 @@ export default function PlugLinks() {
           console.log(err) 
         })
            
-      
+       
     } 
     
       getlinks()
@@ -28,21 +28,28 @@ export default function PlugLinks() {
    
   }, [] )
   return (
-    <div className='bg-gray-500 bg-opacity-80 h-screen px-6'>
+    <div className=' bg-opacity-80 h-screen px-6'>
+
+      <div className='bg-gray-800 h-20 w-20 mt-10 mx-36 rounded-full flex justify-center '>
+       <h2 className='text-white text-center text-4xl pt-5'>
+         {pluglink.displayName && pluglink.displayName.charAt(0).toUpperCase()}
+         </h2>
+      </div>
       
-        <h4 className='my-5 pt-5 text-center text-white font-bold text-lg'>@{pluglink && pluglink.displayName}</h4>
+        <h4 className='my-2 pt-5 text-center font-name font-bold text-lg'>@{pluglink && pluglink.displayName}</h4>
         {pluglink && pluglink.userLinks.map((userlink) => (
           <div className='grid place-items-center' key={uuidv4()}>
-           <li className='my-7 list-none'> <a className='bg-black bg-opacity-75 text-white p-2 px-8 rounded' href={userlink.urls}>
+           <div className='my-7 list-none bg-black bg-opacity-20 p-3 px-16 rounded-xl '> <a className=' text-black' href={userlink.urls}>
               {userlink.label}
-              </a></li> 
+              </a></div> 
             
           </div>
         ))}
-        <div>
 
+        <div className='pt-5'>
+        <p className='text-center text-black'> create your<Link className='text-sec ' to='/'> link plug 
+</Link></p>
         </div>
-    <p className='text-center text-white'> create your link plug <Link className='text-sec' to='/'>Here</Link></p>
     </div>
   )
 }

@@ -59,8 +59,8 @@ export default function Home() {
       <div className='mt-10'>
         <div className=' lg:grid h-screen grid-cols-2 gap-2 lg:mt-20'>
           <div>
-            <h1 className=' text-5xl lg:text-7xl text-sec text-center lg:px-10 font-bold py-7 '>Let the world find you with one link</h1>
-            <p className='text-center text-xl text-pry font-semibold py-7'>Plug all your profile links and share your unique link </p>
+            <h1 className=' text-5xl lg:text-7xl text-sec font-hero text-center lg:px-10 font-bold py-7 '>Let the world find you with one link</h1>
+            <p className='text-center text-xl font-rider text-pry font-semibold py-7'>Plug all your profile links and share your unique link </p>
             <div className='flex justify-center'>
              
               <button className='bg-sec w-40 h-10 text-white rounded-2xl' onClick={handleButton}>Get Started</button>

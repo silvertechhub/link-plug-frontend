@@ -51,7 +51,7 @@ export default function Login() {
 
   
   return (
-    <div className='px-6 lg:flex justify-center'>
+    <div className='px-6 lg:flex  justify-center'>
       <div className='mt-14 p-10 md:px-52 lg:max-w-md lg:px-20 container rounded-lg border border-gray-200 shadow-md '>
       <h2 className='text-center text-3xl text-sec font-bold underline underline-offset-4'> Login </h2>
         <form onSubmit={handleSubmit}>

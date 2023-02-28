@@ -57,10 +57,10 @@ export default function Links({ handleButton}) {
             {userPlug && userPlug.map((details) => (
                 <div key={uuidv4()} className=' mx-6 py-3'>
                
-                <h1 className='text-center text-sec'>@{details.displayName}</h1>
+                <h1 className='text-center font-name text-sec'>@{details.displayName}</h1>
                 {details && details.userLinks.map((pair) => (
                   <div key={uuidv4()} className='flex justify-center'>
-                    <div className='border-2 my-6 grid justify-items-center w-fit px-9 shadow-lg rounded-tl-lg rounded-br-lg'>
+                    <div className='border-2 my-6 grid bg-blue-gray-50 bg-opacity-70 justify-items-center w-64 px-9 shadow-lg rounded-lg'>
                       <div className='w-auto px-3 py-1 bg-pry text-white rounded-tl-lg rounded-br-lg text-center my-5'>{pair.urls}</div>
                       <div className='border px-3 rounded-tr-lg rounded-bl-lg bg-cool text-black bg-opacity-50 w-fit py-1 my-5 text-center'>{pair.label}</div>
                     </div>

@@ -11,6 +11,12 @@ module.exports = withMT({
         "cool":"#CFF5E7",
         "rty":"#1cd45e",
         
+      },
+      fontFamily: {
+       
+        name: ["Tilt Neon", "cursive"],
+        rider: ["Roboto Slab", "serif"],
+        hero: ["Nanum Gothic", "sans-serif"],
       }
     },
   },
