@@ -38,16 +38,17 @@ export default function Navbar() {
   },[]);
 
   return (
-    <div className='shadow-md flex'>
+    <nav className="w-full bg-white shadow sticky top-0 ">
+       <div className='shadow-md flex justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8'>
       {/* <div id="google_translate_element"></div> */}
-      <div className='pt-8 px-6 flex'>
-         <img src={logo}  alt='logo' className=''  />
+      <div className='pt-8 px-6 flex items-center justify-between py-3 md:py-5 md:block'>
+        <Link to='/'> <img src={logo}  alt='logo' className=''  /></Link>
          <div onClick={handletoggle} className="md:hidden ">
               {!nav ? <MenuAlt2Icon  className='w-5'/> : <XIcon className='w-5'/> }
           </div>
       </div>
-      <div className=' absolute mt-6 mr-6 inset-y-0 right-0'> 
-        <ul className={ 'hidden bg-opacity-90 lg:flex space-x-4  text-sec'}>
+      <div className=' mr-6   flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-6'> 
+        <ul className={ ' items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0'}>
          <li className=' font-bold'> <Link to='/'>Home</Link></li>
          <li className=''> <Link to='/uniquelink'>Dashboard</Link></li>
          <li className=''><Link to='/profile'>Profile</Link></li>
@@ -66,11 +67,11 @@ export default function Navbar() {
           <div><Link to='/login'>login</Link></div>
         </div>)} 
 
-        {user && (
+        {/* {user && (
           <div>
          
         <div > 
-        <ul className={!nav? 'hidden' : ' absolute bg-black bg-opacity-90 z-10 text-center w-full px-8 text-white'}>
+        <ul className={!nav? 'hidden' : '  bg-black bg-opacity-90 z-10 text-center w-full px-8 text-white'}>
          <li className='my-8 w-full font-bold'> <Link to='/'>Home</Link></li>
          <li className='my-8 w-full'> <Link to='/uniquelink'>Dashboard</Link></li>
          <li className='my-8 w-full'><Link to='/profile'>Profile</Link></li>
@@ -81,7 +82,9 @@ export default function Navbar() {
           
         </div>
         </div>)}
-        
+         */}
     </div>
-  )
+   
+    </nav>
+     )
 }

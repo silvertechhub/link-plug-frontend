@@ -8,7 +8,7 @@ import PlugLinks from './components/PlugLinks';
 import ProfilePage from './components/ProfilePage'
 import Login from './components/Login';
 import Signup from './components/Signup';
-import Navbar from './components/Navbar';
+import Nav from './components/Nav';
 import { AuthHook } from './hooks/authHooks'
 import ForgotPassword from './components/ForgotPassword';
 import ResetPassword from './components/ResetPassword';
@@ -22,7 +22,7 @@ function App() {
     
       
       <BrowserRouter>
-      <Navbar />
+      <Nav />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/forgotpassword' element={<ForgotPassword />} />

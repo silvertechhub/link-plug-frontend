@@ -61,7 +61,7 @@ export default function Links({ handleButton}) {
                 {details && details.userLinks.map((pair) => (
                   <div key={uuidv4()} className='flex justify-center'>
                     <div className='border-2 my-6 grid bg-blue-gray-50 bg-opacity-70 justify-items-center w-64 px-9 shadow-lg rounded-lg'>
-                      <div className='w-auto px-3 py-1 bg-pry text-white rounded-tl-lg rounded-br-lg text-center my-5'>{pair.urls}</div>
+                      <div className='w-44 px-3 py-1 bg-pry text-white rounded-tl-lg truncate rounded-br-lg text-center my-5'>{pair.urls}</div>
                       <div className='border px-3 rounded-tr-lg rounded-bl-lg bg-cool text-black bg-opacity-50 w-fit py-1 my-5 text-center'>{pair.label}</div>
                     </div>
                
